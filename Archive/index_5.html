@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Davis Pemberton Family Reunion 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f5f5f7;
+    --surface: #ffffff;
+    --surface2: #fafafa;
+    --border: #e0e0e5;
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #610C04;
+    --accent-light: #f9eded;
+    --gold: #c49a3c;
+    --gold-light: #fdf6e3;
+    --radius: 18px;
+    --radius-sm: 10px;
+    --shadow: 0 2px 20px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
+    --shadow-lg: 0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(245,245,247,0.82);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px; height: 52px;
+  }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px; font-weight: 700;
+    color: var(--text-primary); letter-spacing: 0.01em;
+  }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    font-size: 13px; font-weight: 400; color: var(--text-secondary);
+    text-decoration: none; transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-cta {
+    background: var(--accent); color: #fff !important;
+    padding: 7px 16px; border-radius: 20px; font-weight: 500 !important;
+    font-size: 13px !important; text-decoration: none;
+    transition: opacity .2s !important;
+  }
+  .nav-cta:hover { opacity: 0.85 !important; }
+
+  /* ── HERO ── */
+  .hero {
+    text-align: center;
+    padding: 100px 24px 80px;
+    background: linear-gradient(160deg, #f9eded 0%, #f5f5f7 50%, #fdf6e3 100%);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(97,12,4,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 20px;
+    background: var(--accent-light); padding: 6px 16px; border-radius: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 7vw, 76px);
+    font-weight: 700; line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub {
+    font-size: clamp(17px, 2.5vw, 21px);
+    font-weight: 300; color: var(--text-secondary);
+    max-width: 520px; margin: 0 auto 14px;
+  }
+  .hero-date {
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 600; color: var(--gold);
+    letter-spacing: 0.04em; margin-bottom: 48px;
+  }
+  .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; border-radius: 980px; font-size: 15px; font-weight: 500;
+    text-decoration: none; transition: all .2s; cursor: pointer;
+    border: none; font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 4px 16px rgba(97,12,4,0.25); }
+  .btn-primary:hover { background: #4a0903; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(97,12,4,0.3); }
+  .btn-secondary { background: var(--surface); color: var(--text-primary); border: 1px solid var(--border); box-shadow: var(--shadow); }
+  .btn-secondary:hover { background: #f0f0f2; transform: translateY(-1px); }
+  .btn-gold { background: var(--gold); color: #fff; box-shadow: 0 4px 16px rgba(196,154,60,0.25); }
+  .btn-gold:hover { background: #b08930; transform: translateY(-1px); }
+
+  /* ── COUNTDOWN ── */
+  .countdown-bar {
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 22px 40px; display: flex; justify-content: center; gap: 48px;
+  }
+  .countdown-item { text-align: center; }
+  .countdown-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; font-weight: 700; color: var(--accent); line-height: 1;
+  }
+  .countdown-label { font-size: 11px; color: var(--text-tertiary); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+  /* ── SECTION ── */
+  section { padding: 80px 24px; max-width: 960px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px); font-weight: 700;
+    color: var(--text-primary); margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .section-sub { font-size: 16px; color: var(--text-secondary); margin-bottom: 40px; max-width: 540px; }
+
+  /* ── CARDS GRID ── */
+  .cards { display: grid; gap: 16px; }
+  .cards-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .cards-4 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow);
+    transition: box-shadow .2s, transform .2s;
+  }
+  .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+
+  /* ── SCHEDULE ── */
+  .schedule-day {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  .schedule-day-header {
+    background: var(--accent); color: #fff;
+    padding: 16px 24px; display: flex; align-items: center; gap: 14px;
+  }
+  .schedule-day-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; }
+  .schedule-day-date { font-size: 13px; opacity: 0.8; margin-left: auto; }
+  .schedule-events { padding: 0; }
+  .schedule-event {
+    display: flex; align-items: flex-start; gap: 20px;
+    padding: 18px 24px; border-bottom: 1px solid var(--border);
+  }
+  .schedule-event:last-child { border-bottom: none; }
+  .event-time {
+    font-size: 13px; font-weight: 600; color: var(--accent);
+    min-width: 60px; padding-top: 2px; white-space: nowrap;
+  }
+  .event-name { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+  .event-loc { font-size: 13px; color: var(--text-secondary); margin-top: 3px; }
+
+  /* ── PRICING ── */
+  .pricing-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow);
+    display: flex; justify-content: space-between; align-items: center;
+    transition: box-shadow .2s;
+  }
+  .pricing-card:hover { box-shadow: var(--shadow-lg); }
+  .pricing-card + .pricing-card { margin-top: 10px; }
+  .pricing-label { font-size: 17px; font-weight: 500; }
+  .pricing-sub { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+  .pricing-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700; color: var(--accent);
+  }
+  .pricing-amount.free { color: var(--gold); }
+  .pricing-badge {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    background: var(--accent-light); color: var(--accent); padding: 3px 10px; border-radius: 20px;
+    margin-top: 4px; display: inline-block;
+  }
+
+  /* ── INCLUDES ── */
+  .includes-list { list-style: none; }
+  .includes-list li {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+    font-size: 15px; color: var(--text-primary);
+  }
+  .includes-list li:last-child { border-bottom: none; }
+  .check { color: var(--accent); font-size: 18px; flex-shrink: 0; }
+
+  /* ── PAYMENT ── */
+  .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .payment-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 32px 28px; box-shadow: var(--shadow);
+    text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .payment-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  .payment-icon { font-size: 36px; }
+  .payment-title { font-size: 17px; font-weight: 600; }
+  .payment-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+  /* ── HOTEL ── */
+  .hotel-featured {
+    background: linear-gradient(135deg, var(--accent) 0%, #3d0702 100%);
+    border-radius: var(--radius); padding: 36px; color: #fff; margin-bottom: 16px;
+    box-shadow: 0 8px 32px rgba(97,12,4,0.3);
+  }
+  .hotel-featured .hotel-tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+  .hotel-featured h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .hotel-featured p { opacity: 0.85; font-size: 15px; margin-bottom: 20px; }
+  .hotel-code { background: rgba(255,255,255,0.15); border-radius: var(--radius-sm); padding: 12px 18px; display: inline-flex; flex-direction: column; gap: 2px; }
+  .hotel-code span:first-child { font-size: 11px; opacity: 0.7; letter-spacing: 0.1em; text-transform: uppercase; }
+  .hotel-code strong { font-size: 16px; letter-spacing: 0.05em; }
+  .hotels-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .hotel-alt { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 18px; font-size: 14px; font-weight: 500; box-shadow: var(--shadow); }
+
+  /* ── REGISTER SECTION ── */
+  .register-hero {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 56px 40px; text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .register-hero h2 { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; margin-bottom: 12px; }
+  .register-hero p { font-size: 16px; color: var(--text-secondary); margin-bottom: 8px; }
+  .deadline-badge {
+    display: inline-block; background: #fff3e0; color: #e65100;
+    font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin-bottom: 32px;
+  }
+  .register-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text-primary); color: rgba(255,255,255,0.7);
+    text-align: center; padding: 48px 24px 36px;
+  }
+  footer h4 { font-family: 'Playfair Display', serif; font-size: 20px; color: #fff; margin-bottom: 6px; }
+  footer p { font-size: 13px; margin-bottom: 4px; }
+  footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  footer a:hover { color: #fff; }
+  .footer-sep { margin: 28px auto; width: 40px; height: 1px; background: rgba(255,255,255,0.2); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .countdown-bar { gap: 24px; padding: 18px 20px; }
+    .countdown-num { font-size: 26px; }
+    .register-hero { padding: 36px 20px; }
+    .hotel-featured { padding: 24px; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero > * { animation: fadeUp .7s ease both; }
+  .hero-eyebrow { animation-delay: .05s; }
+  .hero h1 { animation-delay: .15s; }
+  .hero-sub { animation-delay: .22s; }
+  .hero-date { animation-delay: .28s; }
+  .hero-actions { animation-delay: .35s; }
+
+  /* ── TIMELINE ── */
+  .timeline { position: relative; padding-left: 0; }
+  .timeline::before {
+    content: ''; position: absolute; left: 28px; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, #610C04, var(--gold));
+    border-radius: 2px;
+  }
+  .timeline-item {
+    display: flex; gap: 24px; align-items: flex-start;
+    margin-bottom: 36px; position: relative;
+  }
+  .timeline-dot {
+    flex-shrink: 0; width: 58px; height: 58px;
+    background: var(--accent); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-family: 'Playfair Display', serif;
+    font-size: 13px; font-weight: 700; z-index: 1;
+    box-shadow: 0 4px 16px rgba(97,12,4,0.25);
+  }
+  .timeline-dot.gold { background: var(--gold); box-shadow: 0 4px 16px rgba(196,154,60,0.25); }
+  .timeline-content {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 24px 28px;
+    box-shadow: var(--shadow); flex: 1;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .timeline-content:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  .timeline-year {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 6px;
+  }
+  .timeline-title {
+    font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700;
+    color: var(--text-primary); margin-bottom: 6px;
+  }
+  .timeline-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+  /* ── HOTEL BOOKING ── */
+  .hotel-booking-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .hotel-booking-card .hotel-meta { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+  .hotel-booking-card .hotel-info { flex: 1; }
+  .hotel-stars { color: var(--gold); font-size: 16px; margin-bottom: 6px; }
+  .hotel-booking-card h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .hotel-booking-card .hotel-address { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
+  .hotel-amenities { display: flex; flex-wrap: wrap; gap: 8px; }
+  .amenity-pill {
+    font-size: 12px; font-weight: 500; background: var(--accent-light);
+    color: var(--accent); padding: 4px 12px; border-radius: 20px;
+  }
+  .hotel-block-banner {
+    background: linear-gradient(135deg, var(--accent) 0%, #3d0702 100%);
+    border-radius: var(--radius-sm); padding: 16px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .hotel-block-banner .block-info { color: #fff; }
+  .hotel-block-banner .block-label { font-size: 11px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.1em; }
+  .hotel-block-banner .block-code { font-size: 18px; font-weight: 700; letter-spacing: 0.06em; }
+  .hotel-block-banner .block-phone { font-size: 13px; opacity: 0.8; margin-top: 2px; }
+
+  /* ── CALENDAR BUTTONS ── */
+  .cal-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .cal-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 500; padding: 6px 14px;
+    border-radius: 20px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text-secondary);
+    text-decoration: none; cursor: pointer;
+    transition: all .2s; font-family: 'DM Sans', sans-serif;
+  }
+  .cal-btn:hover { background: var(--accent-light); color: var(--accent); border-color: var(--accent); }
+  .cal-btn.gcal { }
+  .cal-btn.apple { }
+
+  /* ── PRICING REGISTER BTN ── */
+  .pricing-right { display: flex; align-items: center; gap: 16px; }
+
+
+  .hotel-alt:hover {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+    transition: all .2s;
+  }
+
+
+  /* ── EMAIL LINKS ── */
+  a.email-link { text-decoration:none; }
+  a.email-link:hover { text-decoration:underline; }
+
+  /* ── STAY IN THE LOOP ── */
+  .loop-wrap { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:36px; box-shadow:var(--shadow); }
+  .loop-form { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+  .loop-input { flex:1; min-width:180px; padding:12px 16px; border:1px solid var(--border); border-radius:980px; font-family:'DM Sans',sans-serif; font-size:14px; background:var(--bg); color:var(--text-primary); outline:none; transition:border-color .2s; }
+  .loop-input:focus { border-color:var(--accent); }
+  .loop-btn { background:var(--accent); color:#fff; border:none; border-radius:980px; padding:12px 28px; font-size:14px; font-weight:500; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all .2s; }
+  .loop-btn:hover { background:#4a0903; transform:translateY(-1px); }
+  .loop-msg { font-size:13px; margin-top:10px; min-height:18px; }
+  .loop-msg.ok { color:var(--accent); }
+  .loop-msg.err { color:#c0392b; }
+
+  /* ── FAMILY MAP ── */
+  #family-map { height:420px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); }
+  .map-legend { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+  .leg-item { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text-secondary); }
+  .leg-dot { width:12px; height:12px; border-radius:50%; flex-shrink:0; }
+
+  /* ── PHOTO GALLERY ── */
+  .masonry { columns:3; column-gap:12px; }
+  @media(max-width:700px){.masonry{columns:2;}}
+  @media(max-width:440px){.masonry{columns:1;}}
+  .masonry-item { break-inside:avoid; margin-bottom:12px; cursor:pointer; border-radius:var(--radius-sm); overflow:hidden; }
+  .masonry-item img { width:100%; display:block; border-radius:var(--radius-sm); transition:transform .3s; }
+  .masonry-item:hover img { transform:scale(1.03); }
+  .gallery-ph { background:linear-gradient(135deg,#f0e8e8,#e8dada); padding:40px 20px; text-align:center; border-radius:var(--radius-sm); color:var(--text-secondary); font-size:13px; }
+  .gallery-note { background:var(--gold-light); border:1px solid #e8d5a0; border-radius:var(--radius-sm); padding:14px 18px; font-size:13px; color:var(--text-secondary); margin-bottom:20px; }
+  #lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.92); z-index:2000; align-items:center; justify-content:center; }
+  #lightbox.open { display:flex; }
+  #lightbox img { max-width:90vw; max-height:88vh; border-radius:8px; }
+  #lb-close { position:absolute; top:20px; right:24px; color:#fff; font-size:32px; cursor:pointer; opacity:.7; line-height:1; }
+  #lb-close:hover { opacity:1; }
+  #lb-cap { position:absolute; bottom:20px; color:rgba(255,255,255,.6); font-size:13px; }
+
+  /* ── IN MEMORIAM ── */
+  .mem-banner { background:linear-gradient(135deg,var(--accent),#3d0702); border-radius:var(--radius); padding:28px; color:#fff; text-align:center; margin-bottom:32px; }
+  .mem-banner h3 { font-family:'Playfair Display',serif; font-size:22px; margin-bottom:6px; }
+  .mem-banner p { opacity:.8; font-size:14px; }
+  .mem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:20px; }
+  .mem-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 20px; text-align:center; box-shadow:var(--shadow); transition:box-shadow .2s,transform .2s; }
+  .mem-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-2px); }
+  .mem-photo { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,#e8d5d5,#c9a9a9); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; overflow:hidden; border:3px solid var(--accent); }
+  .mem-photo img { width:100%; height:100%; object-fit:cover; }
+  .mem-name { font-family:'Playfair Display',serif; font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:4px; }
+  .mem-years { font-size:13px; color:var(--text-secondary); margin-bottom:8px; }
+  .mem-note { font-size:12px; color:var(--text-tertiary); font-style:italic; }
+
+  /* ── TRAVEL & EBOOK ── */
+  .attraction-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .attr-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:box-shadow .2s,transform .2s; text-decoration:none; color:inherit; display:block; }
+  .attr-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-3px); }
+  .attr-img { height:130px; display:flex; align-items:center; justify-content:center; font-size:48px; }
+  .attr-body { padding:18px; }
+  .attr-name { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; margin-bottom:6px; }
+  .attr-desc { font-size:13px; color:var(--text-secondary); line-height:1.5; margin-bottom:10px; }
+  .attr-link { font-size:12px; font-weight:600; color:var(--accent); letter-spacing:.06em; text-transform:uppercase; }
+  .ebook-card { background:linear-gradient(135deg,var(--gold),#b08930); border-radius:var(--radius); padding:40px 36px; color:#fff; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; box-shadow:0 8px 32px rgba(196,154,60,.3); margin-top:48px; }
+  .ebook-text h3 { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:8px; }
+  .ebook-text p { opacity:.85; font-size:15px; max-width:400px; line-height:1.6; }
+  .ebook-btn { background:#fff; color:var(--gold); border:none; padding:14px 28px; border-radius:980px; font-size:15px; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all .2s; white-space:nowrap; }
+  .ebook-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,0,0,.15); }
+
+  /* ── FAMILY TREE ── */
+  #tree-container { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); min-height:300px; overflow-x:auto; }
+  .tree-note { background:#fef3f3; border:1px solid #e8c0c0; border-radius:var(--radius-sm); padding:14px 18px; font-size:13px; color:var(--text-secondary); margin-bottom:16px; }
+  .tree-link { fill:none; stroke:var(--border); stroke-width:1.5; }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Davis Pemberton Family Reunion</div>
+  <div class="nav-links">
+    <a href="#history">History</a><a href="#map">Family Map</a><a href="#memoriam">In Memoriam</a><a href="#travel">Explore DC</a><a href="#schedule">Schedule</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#hotel">Hotel</a>
+    <a href="#pay">Payment</a>
+    <a href="#register" class="nav-cta">Register Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Save the Date</div>
+  <h1>Davis Pemberton<br /><span>Family Reunion</span></h1>
+  <p class="hero-sub">We have come this far by faith.</p>
+  <p class="hero-date">📍 Washington, D.C. &nbsp;·&nbsp; 📅 July 23 – 26, 2026</p>
+  <div class="hero-actions">
+    <a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary">🎟 Register on Eventbrite</a>
+    <a href="#schedule" class="btn btn-secondary">View Schedule</a>
+  </div>
+</div>
+
+<!-- COUNTDOWN -->
+<div class="countdown-bar">
+  <div class="countdown-item"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">Days</div></div>
+  <div class="countdown-item"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-label">Hours</div></div>
+  <div class="countdown-item"><div class="countdown-num" id="cd-mins">--</div><div class="countdown-label">Minutes</div></div>
+  <div class="countdown-item"><div class="countdown-num" id="cd-secs">--</div><div class="countdown-label">Seconds</div></div>
+</div>
+
+<!-- SCHEDULE -->
+
+<hr class="divider" />
+
+<!-- HISTORY -->
+<section id="history">
+  <div class="section-label">Our Roots</div>
+  <div class="section-title">The Davis Pemberton Story</div>
+  <p class="section-sub">Five generations, one family. Here's how we got here.</p>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot">~1920</div>
+      <div class="timeline-content">
+        <div class="timeline-year">Placeholder · Year One</div>
+        <div class="timeline-title">The Beginning</div>
+        <div class="timeline-desc">Add your family founding story here — where did the Davis Pemberton family originate? Which city, which state, which generation started it all?</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot gold">~1950</div>
+      <div class="timeline-content">
+        <div class="timeline-year">Placeholder · Year Two</div>
+        <div class="timeline-title">Growth & Migration</div>
+        <div class="timeline-desc">Describe a pivotal moment in the family's journey — a move, a milestone, a generation that shaped who you are today.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">~1975</div>
+      <div class="timeline-content">
+        <div class="timeline-year">Placeholder · Year Three</div>
+        <div class="timeline-title">The First Reunion</div>
+        <div class="timeline-desc">When did the family first come together to celebrate? Share the story of the first gathering — where it was, who was there, and what made it special.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot gold">~2000</div>
+      <div class="timeline-content">
+        <div class="timeline-year">Placeholder · Year Four</div>
+        <div class="timeline-title">A New Generation</div>
+        <div class="timeline-desc">The family grew. New faces, new places, new traditions. Describe a defining moment that carried the legacy into the 21st century.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">2026</div>
+      <div class="timeline-content">
+        <div class="timeline-year">Washington D.C. · July 2026</div>
+        <div class="timeline-title">Davis Pemberton Reunion 2026</div>
+        <div class="timeline-desc">The family comes together again — stronger, bigger, and more connected than ever. Washington D.C. will be our backdrop as we celebrate where we've been and where we're going.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="section-label">Weekend Program</div>
+  <div class="section-title">Event Schedule</div>
+  <p class="section-sub">Four days of connection, celebration, and family tradition across the D.C. metro area.</p>
+
+  <div class="schedule-day">
+    <div class="schedule-day-header">
+      <span>🐟</span>
+      <div class="schedule-day-name">Thursday</div>
+      <div class="schedule-day-date">July 23, 2026</div>
+    </div>
+    <div class="cal-buttons" style="padding:12px 24px; background:rgba(97,12,4,0.04); border-top:1px solid rgba(255,255,255,0.15);">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Davis+Pemberton+Reunion+%E2%80%93+Day+1&dates=20260723T150000Z/20260724T000000Z&details=Hotel+Meet+%26+Greet+%2B+Fish+Fry&location=Westin+National+Harbor" target="_blank" class="cal-btn gcal">📅 Google Calendar</a>
+      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260723T150000%0ADTEND:20260724T000000%0ASUMMARY:Davis+Pemberton+Reunion+-+Day+1%0ALOCATION:Westin+National+Harbor%0AEND:VEVENT%0AEND:VCALENDAR" download="reunion-day1.ics" class="cal-btn apple">🍎 Apple Calendar</a>
+    </div>
+    <div class="schedule-events">
+      <div class="schedule-event">
+        <div class="event-time">3:00 PM</div>
+        <div>
+          <div class="event-name">Hotel Meet &amp; Greet</div>
+          <div class="event-loc">Westin National Harbor · 171 Waterfront St, Oxon Hill, MD</div>
+        </div>
+      </div>
+      <div class="schedule-event">
+        <div class="event-time">6:00 PM</div>
+        <div>
+          <div class="event-name">Fish Fry</div>
+          <div class="event-loc">Uncle Mike's House · 2105 Monticello Ct, Ft. Washington, MD</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="schedule-day">
+    <div class="schedule-day-header">
+      <span>🍖</span>
+      <div class="schedule-day-name">Friday</div>
+      <div class="schedule-day-date">July 24, 2026</div>
+    </div>
+    <div class="cal-buttons" style="padding:12px 24px; background:rgba(97,12,4,0.04); border-top:1px solid rgba(255,255,255,0.15);">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Davis+Pemberton+Reunion+%E2%80%93+Day+2&dates=20260724T150000Z/20260725T000000Z&details=Family+Cookout+%2B+Top+Golf&location=Bolling+AFB" target="_blank" class="cal-btn gcal">📅 Google Calendar</a>
+      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260724T150000%0ADTEND:20260725T000000%0ASUMMARY:Davis+Pemberton+Reunion+-+Day+2%0ALOCATION:Bolling+AFB%0AEND:VEVENT%0AEND:VCALENDAR" download="reunion-day2.ics" class="cal-btn apple">🍎 Apple Calendar</a>
+    </div>
+    <div class="schedule-events">
+      <div class="schedule-event">
+        <div class="event-time">3:00 PM</div>
+        <div>
+          <div class="event-name">Family Cookout</div>
+          <div class="event-loc">Bolling AFB · 50 Theisen St, Washington, DC 20032</div>
+        </div>
+      </div>
+      <div class="schedule-event">
+        <div class="event-time">7:00 PM</div>
+        <div>
+          <div class="event-name">Top Golf</div>
+          <div class="event-loc">Top Golf National Harbor · 6400 Clipper Way, Oxon Hill, MD 20745</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="schedule-day">
+    <div class="schedule-day-header">
+      <span>🎉</span>
+      <div class="schedule-day-name">Saturday</div>
+      <div class="schedule-day-date">July 25, 2026</div>
+    </div>
+    <div class="cal-buttons" style="padding:12px 24px; background:rgba(97,12,4,0.04); border-top:1px solid rgba(255,255,255,0.15);">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Davis+Pemberton+Reunion+%E2%80%93+Day+3&dates=20260725T090000Z/20260726T000000Z&details=African+American+Museum+%2B+Family+Banquet&location=1400+Constitution+Ave+NW" target="_blank" class="cal-btn gcal">📅 Google Calendar</a>
+      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260725T090000%0ADTEND:20260726T000000%0ASUMMARY:Davis+Pemberton+Reunion+-+Day+3%0ALOCATION:1400+Constitution+Ave+NW%0AEND:VEVENT%0AEND:VCALENDAR" download="reunion-day3.ics" class="cal-btn apple">🍎 Apple Calendar</a>
+    </div>
+    <div class="schedule-events">
+      <div class="schedule-event">
+        <div class="event-time">9:00 AM</div>
+        <div>
+          <div class="event-name">African American Museum</div>
+          <div class="event-loc">1400 Constitution Ave. NW, Washington, DC 20560</div>
+        </div>
+      </div>
+      <div class="schedule-event">
+        <div class="event-time">5:00 PM</div>
+        <div>
+          <div class="event-name">Family Reunion Banquet</div>
+          <div class="event-loc">Bolling AFB · 50 Theisen St, Washington, DC 20032</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="schedule-day">
+    <div class="schedule-day-header">
+      <span>⛪</span>
+      <div class="schedule-day-name">Sunday</div>
+      <div class="schedule-day-date">July 26, 2026</div>
+    </div>
+    <div class="cal-buttons" style="padding:12px 24px; background:rgba(97,12,4,0.04); border-top:1px solid rgba(255,255,255,0.15);">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Davis+Pemberton+Reunion+%E2%80%93+Day+4&dates=20260726T110000Z/20260726T140000Z&details=Sunday+Church+Service&location=St.+Marks+Church+Forest+Heights+MD" target="_blank" class="cal-btn gcal">📅 Google Calendar</a>
+      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260726T110000%0ADTEND:20260726T140000%0ASUMMARY:Davis+Pemberton+Reunion+-+Day+4%0ALOCATION:St.+Marks+Church%0AEND:VEVENT%0AEND:VCALENDAR" download="reunion-day4.ics" class="cal-btn apple">🍎 Apple Calendar</a>
+    </div>
+    <div class="schedule-events">
+      <div class="schedule-event">
+        <div class="event-time">11:00 AM</div>
+        <div>
+          <div class="event-name">Sunday Service</div>
+          <div class="event-loc">St. Mark's Church · 5427 Indian Head Hwy, Forest Heights, MD 20745</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Registration Fees</div>
+  <div class="section-title">What's My Price?</div>
+  <p class="section-sub">Simple, transparent pricing for every family member. <strong>Deadline: May 29, 2026.</strong></p>
+
+  <div class="pricing-card"><div><div class="pricing-label">Adults</div></div><div class="pricing-right"><div class="pricing-amount">$200</div><a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:13px; white-space:nowrap;">Register →</a></div></div>
+  <div class="pricing-card"><div><div class="pricing-label">Seniors</div><div class="pricing-sub">Age 80 and over</div></div><div class="pricing-right"><div class="pricing-amount">$125</div><a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:13px; white-space:nowrap;">Register →</a></div></div>
+  <div class="pricing-card"><div><div class="pricing-label">Children</div><div class="pricing-sub">Ages 4 – 12</div></div><div class="pricing-right"><div class="pricing-amount">$25</div><a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:13px; white-space:nowrap;">Register →</a></div></div>
+  <div class="pricing-card"><div><div class="pricing-label">Little Ones</div><div class="pricing-sub">Age 3 &amp; under</div></div><div><div class="pricing-amount free">Free</div><span class="pricing-badge">Complimentary</span></div></div>
+
+  <div style="margin-top: 36px;">
+    <div class="section-label" style="margin-bottom: 14px;">What's Included</div>
+    <div class="card">
+      <ul class="includes-list">
+        <li><span class="check">✓</span> Access to all reunion events</li>
+        <li><span class="check">✓</span> Family Reunion T-Shirt</li>
+        <li><span class="check">✓</span> Scholarship donation in your name</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- HOTEL -->
+<section id="hotel">
+  <div class="section-label">Accommodations</div>
+  <div class="section-title">Where to Stay</div>
+  <p class="section-sub">Our host hotel is steps from the Potomac waterfront at National Harbor. Use the group block code for discounted rates.</p>
+
+  <div class="hotel-booking-card" style="margin-bottom:16px;">
+    <div class="hotel-meta">
+      <div class="hotel-info">
+        <div class="hotel-stars">★★★★★</div>
+        <h3>Westin National Harbor</h3>
+        <div class="hotel-address">171 Waterfront St, Oxon Hill, MD 20745 · (301) 567-3999</div>
+        <div class="hotel-amenities">
+          <span class="amenity-pill">🏊 Pool</span>
+          <span class="amenity-pill">🏋️ Fitness Center</span>
+          <span class="amenity-pill">🍽️ Restaurant</span>
+          <span class="amenity-pill">🅿️ Valet Parking</span>
+          <span class="amenity-pill">📍 Waterfront Views</span>
+          <span class="amenity-pill">🚗 10 min to D.C.</span>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-block-banner">
+      <div class="block-info">
+        <div class="block-label">🏨 Official Host Hotel · Group Block Code</div>
+        <div class="block-code">"Davis Pemberton Family Reunion"</div>
+        <div class="block-phone">Call to book: (301) 567-3999 · Mention the block code for group rates</div>
+      </div>
+      <a href="https://www.marriott.com/en-us/hotels/washw-the-westin-washington-national-harbor/overview/" target="_blank" class="btn btn-primary" style="flex-shrink:0;">Book Now →</a>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-bottom: 12px;">Other Nearby Hotels</div>
+  <div class="hotels-grid">
+    <a href="https://www.hyatt.com/hyatt-place/en-US/iadzr-hyatt-place-national-harbor" target="_blank" class="hotel-alt" style="text-decoration:none; display:block; cursor:pointer;">Hyatt Place National Harbor <span style="float:right; font-size:11px; color:var(--accent);">Book →</span></a>
+    <a href="https://www.marriott.com/en-us/hotels/wasgn-gaylord-national-resort-and-convention-center/overview/" target="_blank" class="hotel-alt" style="text-decoration:none; display:block; cursor:pointer;">Gaylord National Resort <span style="float:right; font-size:11px; color:var(--accent);">Book →</span></a>
+    <a href="https://www.marriott.com/en-us/hotels/waswa-ac-hotel-national-harbor-washington-dc-area/overview/" target="_blank" class="hotel-alt" style="text-decoration:none; display:block; cursor:pointer;">AC Hotel Marriott National Harbor <span style="float:right; font-size:11px; color:var(--accent);">Book →</span></a>
+    <a href="https://www.marriott.com/en-us/hotels/wasgm-mgm-national-harbor/overview/" target="_blank" class="hotel-alt" style="text-decoration:none; display:block; cursor:pointer;">MGM National Harbor <span style="float:right; font-size:11px; color:var(--accent);">Book →</span></a>
+    <a href="https://www.marriott.com/en-us/hotels/wasnh-residence-inn-national-harbor-washington-dc-area/overview/" target="_blank" class="hotel-alt" style="text-decoration:none; display:block; cursor:pointer;">Residence Inn National Harbor <span style="float:right; font-size:11px; color:var(--accent);">Book →</span></a>
+    <a href="https://www.harborsidehotel.net/" target="_blank" class="hotel-alt" style="text-decoration:none; display:block; cursor:pointer;">Harborside Hotel National Harbor <span style="float:right; font-size:11px; color:var(--accent);">Book →</span></a>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- PAYMENT -->
+<section id="pay">
+  <div class="section-label">Payment</div>
+  <div class="section-title">How to Pay</div>
+  <p class="section-sub">Choose the option that works best for you. Questions? Contact Steven at (301) 325-0736.</p>
+
+  <div class="payment-grid">
+    <!-- Eventbrite -->
+    <div class="payment-card">
+      <div class="payment-icon">🎟</div>
+      <div class="payment-title">Eventbrite</div>
+      <div class="payment-desc">The easiest way to register and pay online. Secure checkout with credit/debit card.</div>
+      <a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center;">Register on Eventbrite</a>
+    </div>
+
+    <!-- Zelle -->
+    <div class="payment-card">
+      <div class="payment-icon">💸</div>
+      <div class="payment-title">Zelle</div>
+      <div class="payment-desc">Send payment directly via Zelle. Fast, no fees, straight to the family fund.</div>
+      <!-- REPLACE href below with your actual Zelle link -->
+      <a href="#zelle-modal" target="_blank" class="btn btn-gold" style="width:100%; justify-content:center;">Pay via Zelle</a>
+    </div>
+
+    <!-- Google Form (offline) -->
+    <div class="payment-card">
+      <div class="payment-icon">📋</div>
+      <div class="payment-title">Offline / Mail-In</div>
+      <div class="payment-desc">Fill out the registration form and mail a money order or cashier's check payable to <strong>Steven Williams Jr</strong> or <strong>John Pulliam</strong> · 6005 Camillo Ct, Riverdale, MD 20737</div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe04Xrnwhd4f-6Ny9pyY7koNlHjNQwy3z6EaFjIBsswWwjniA/viewform" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center;">Complete Registration Form</a>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px; background: var(--gold-light); border: 1px solid #e8d5a0; border-radius: var(--radius); padding: 20px 24px; font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+    ⚠️ <strong>No personal checks accepted.</strong> Accepted forms: Eventbrite, Zelle, Money Order, or Cashier's Check. For questions, email <a href="#" data-email="Stevenalexanderjr98" data-domain="gmail.com" style="color: var(--accent);" class="email-link">Stevenalexanderjr98@gmail.com</a> or call (301) 325-0736.
+  </div>
+</section>
+
+
+<hr class="divider" />
+<section id="loop">
+  <div class="section-label">Stay Connected</div>
+  <div class="section-title">Stay in the Loop</div>
+  <p class="section-sub">Add your name and email — we'll send reunion updates, reminders, and early access to the Davis Pemberton Family E-Book.</p>
+  <div class="loop-wrap">
+    <p style="font-size:15px;color:var(--text-secondary);line-height:1.6;">Join the mailing list to receive updates directly to your inbox. No spam — reunion news only.</p>
+    <form class="loop-form" id="loopForm" onsubmit="submitLoop(event)">
+      <input class="loop-input" type="text" id="loopName" placeholder="Your Full Name" required />
+      <input class="loop-input" type="email" id="loopEmail" placeholder="Email Address" required />
+      <button class="loop-btn" type="submit">Join the List ✉️</button>
+    </form>
+    <div class="loop-msg" id="loopMsg"></div>
+    <p style="font-size:12px;color:var(--text-tertiary);margin-top:12px;">✅ Unsubscribe any time.</p>
+  </div>
+</section>
+
+
+<hr class="divider" />
+<section id="map">
+  <div class="section-label">Where We Are</div>
+  <div class="section-title">Family Map</div>
+  <p class="section-sub">The Davis Pemberton family stretches coast to coast. Here's where everyone is gathering from for the reunion.</p>
+  <div id="family-map"></div>
+  <div class="map-legend" id="mapLegend"></div>
+  <p style="font-size:12px;color:var(--text-tertiary);margin-top:12px;">📍 Update the <code>familyData</code> object in the page script to reflect your actual family distribution.</p>
+</section>
+
+
+<hr class="divider" />
+<section id="gallery">
+  <div class="section-label">Family Memories</div>
+  <div class="section-title">Photo Gallery</div>
+  <p class="section-sub">Moments from reunions past. Connect your Google Drive folder to stream photos automatically.</p>
+  <div class="gallery-note">
+    📁 <strong>To connect your photos:</strong> Replace <code>DRIVE_FOLDER_ID</code> and <code>DRIVE_API_KEY</code> in the script below with your public Google Drive folder ID and API key from <a href="https://console.cloud.google.com" target="_blank" style="color:var(--accent)">console.cloud.google.com</a>.
+  </div>
+  <div class="masonry" id="photoGrid"></div>
+  <div id="galleryStatus"></div>
+</section>
+<div id="lightbox" onclick="closeLightbox(event)">
+  <span id="lb-close" onclick="closeLightbox(null,true)">×</span>
+  <img id="lb-img" src="" alt="" />
+  <div id="lb-cap"></div>
+</div>
+
+
+<hr class="divider" />
+<section id="memoriam">
+  <div class="mem-banner">
+    <h3>🕊 In Loving Memory</h3>
+    <p>We honor those who came before us. Their love, sacrifice, and spirit live on in every gathering of this family.</p>
+  </div>
+  <div class="section-label">Our Ancestors</div>
+  <div class="section-title">Always With Us</div>
+  <p class="section-sub">Though they are no longer with us in person, they are present in our hearts at every reunion.</p>
+  <div class="mem-grid" id="memGrid"></div>
+  <p style="font-size:12px;color:var(--text-tertiary);margin-top:20px;">📋 To add family members, update the <code>ancestorData</code> array in the script below. Add name, years, photo URL (optional), and a short note.</p>
+</section>
+
+
+<hr class="divider" />
+<section id="travel">
+  <div class="section-label">Explore While You're Here</div>
+  <div class="section-title">National Harbor &amp; D.C.</div>
+  <p class="section-sub">Make the most of your trip. These are the must-see spots right in our backyard during reunion weekend.</p>
+  <div class="attraction-grid">
+    <a class="attr-card" href="https://www.nationalharbor.com/directory/capital-wheel/" target="_blank">
+      <div class="attr-img" style="background:linear-gradient(135deg,#fff8e1,#ffe082)">🎡</div>
+      <div class="attr-body">
+        <div class="attr-name">The Capital Wheel</div>
+        <div class="attr-desc">180-foot observation wheel at the waterfront — stunning views of the Potomac and the D.C. skyline.</div>
+        <div class="attr-link">Learn More →</div>
+      </div>
+    </a>
+    <a class="attr-card" href="https://mgmnationalharbor.com" target="_blank">
+      <div class="attr-img" style="background:linear-gradient(135deg,#fce4ec,#f48fb1)">🎰</div>
+      <div class="attr-body">
+        <div class="attr-name">MGM National Harbor</div>
+        <div class="attr-desc">World-class casino, entertainment, dining and nightlife — steps from the host hotel.</div>
+        <div class="attr-link">Learn More →</div>
+      </div>
+    </a>
+    <a class="attr-card" href="https://nationalzoo.si.edu" target="_blank">
+      <div class="attr-img" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7)">🐼</div>
+      <div class="attr-body">
+        <div class="attr-name">The National Zoo</div>
+        <div class="attr-desc">Free-admission Smithsonian zoo with giant pandas, lions, and 2,000 animals across 163 acres.</div>
+        <div class="attr-link">Learn More →</div>
+      </div>
+    </a>
+    <a class="attr-card" href="https://www.si.edu" target="_blank">
+      <div class="attr-img" style="background:linear-gradient(135deg,#e3f2fd,#90caf9)">🏛</div>
+      <div class="attr-body">
+        <div class="attr-name">The Smithsonian</div>
+        <div class="attr-desc">19 free museums on the National Mall — from Air &amp; Space to African American History &amp; Culture.</div>
+        <div class="attr-link">Learn More →</div>
+      </div>
+    </a>
+  </div>
+  <div class="ebook-card">
+    <div class="ebook-text">
+      <h3>📖 The Davis Pemberton Family E-Book</h3>
+      <p>A digital keepsake celebrating our history, stories, and legacy — coming soon for reunion attendees. Enter your email to be notified the moment it drops.</p>
+    </div>
+    <button class="ebook-btn" onclick="ebookNotify()">Notify Me 🔔</button>
+  </div>
+</section>
+
+
+<hr class="divider" />
+<section id="tree">
+  <div class="section-label">Our Lineage</div>
+  <div class="section-title">Family Tree</div>
+  <p class="section-sub">An interactive view of the Davis Pemberton family lineage. Hover any node for details.</p>
+  <div class="tree-note">
+    🌳 <strong>To customize:</strong> Edit the <code>familyTree</code> object in the script below. Each node has a <code>name</code>, optional <code>born</code>/<code>died</code>, and a <code>children</code> array. The tree renders automatically. For a full genealogy import, export from Ancestry.com as GEDCOM and convert with <a href="https://github.com/nicowillis/GEDCOM-to-JSON" target="_blank" style="color:var(--accent)">GEDCOM-to-JSON</a>.
+  </div>
+  <div id="tree-container"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+  DEV / STAGING WORKFLOW — AlxndrHQ/davis-pemberton-reunion
+═══════════════════════════════════════════════════════════════
+
+ONE-TIME SETUP:
+  git clone https://github.com/AlxndrHQ/davis-pemberton-reunion
+  cd davis-pemberton-reunion
+  git checkout -b dev
+
+ENABLE STAGING URL:
+  GitHub repo → Settings → Pages → Source = "dev" branch → / (root)
+  Staging URL:  https://alxndrhq.github.io/davis-pemberton-reunion/
+  Live URL:     https://davispembertonfamilyreunion.com  (main branch)
+
+DAILY WORKFLOW:
+  git checkout dev
+  # make edits to index.html
+  git add index.html
+  git commit -m "feat: description of change"
+  git push origin dev
+  # Preview at staging URL above
+
+DEPLOY TO LIVE:
+  git checkout main
+  git merge dev --no-ff -m "deploy: description"
+  git push origin main
+  git checkout dev
+
+QUICK DEPLOY SCRIPT — save as deploy.sh:
+  #!/bin/bash
+  echo "Merging dev → main..."
+  git checkout main && git merge dev --no-ff -m "deploy: $(date +%Y-%m-%d)" && git push origin main && git checkout dev
+  echo "Live at davispembertonfamilyreunion.com ✅"
+═══════════════════════════════════════════════════════════════ -->
+
+<hr class="divider" />
+
+<!-- REGISTER CTA -->
+<section id="register" style="padding-bottom: 100px;">
+  <div class="register-hero">
+    <div class="section-label" style="margin-bottom: 10px;">You're Invited</div>
+    <h2>Ready to Attend?</h2>
+    <p>Secure your spot before the registration deadline.</p>
+    <div class="deadline-badge">⏰ Registration closes May 29, 2026</div>
+    <div class="register-actions">
+      <a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary">🎟 Register on Eventbrite</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe04Xrnwhd4f-6Ny9pyY7koNlHjNQwy3z6EaFjIBsswWwjniA/viewform" target="_blank" class="btn btn-secondary">📋 Offline Registration Form</a>
+      <!-- REPLACE href below with your actual Zelle link -->
+      <a href="#zelle-modal" target="_blank" class="btn btn-gold">💸 Pay via Zelle</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h4>Davis Pemberton Family Reunion 2026</h4>
+  <p>Washington, D.C. · July 23–26, 2026</p>
+  <div class="footer-sep"></div>
+  <p>Questions? Contact <strong>Steven Williams Jr</strong></p>
+  <p><a href="tel:3013250736">(301) 325-0736</a> · <a href="#" data-email="Stevenalexanderjr98" data-domain="gmail.com" style="color:rgba(255,255,255,0.6);" class="email-link">Stevenalexanderjr98@gmail.com</a></p>
+  <div style="margin-top: 24px; font-size: 12px; opacity: 0.4;">Made with love for the family ♥</div>
+</footer>
+
+<script>
+  // Countdown to July 23, 2026
+  const target = new Date('2026-07-23T15:00:00').getTime();
+  function tick() {
+    const now = Date.now();
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent = '0';
+      document.getElementById('cd-hours').textContent = '0';
+      document.getElementById('cd-mins').textContent = '0';
+      document.getElementById('cd-secs').textContent = '0';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = d;
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+
+<!-- ZELLE MODAL -->
+<div id="zelle-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff;border-radius:20px;padding:36px 32px;max-width:340px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6e6e73;margin-bottom:12px;">Send Money with Zelle®</div>
+    <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#8B0000,#610C04);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;font-weight:700;color:#fff;">SW</div>
+    <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#1d1d1f;margin-bottom:4px;">Steven Williams</div>
+    <div style="font-size:13px;color:#6e6e73;margin-bottom:20px;">Send payment via your banking app</div>
+    <div style="background:#f5f5f7;border-radius:12px;padding:16px;margin-bottom:20px;">
+      <div style="font-size:12px;color:#6e6e73;margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em;">Zelle to</div>
+      <div style="font-size:18px;font-weight:700;color:#1d1d1f;">(301) 325-0736</div>
+      <div style="font-size:12px;color:#6e6e73;margin-top:4px;">Or search by phone in your bank's app</div>
+    </div>
+    <div style="font-size:12px;color:#6e6e73;line-height:1.5;margin-bottom:20px;">
+      In the memo, include:<br><strong>Your name + # of attendees</strong>
+    </div>
+    <button onclick="document.getElementById('zelle-modal').style.display='none'" style="background:#610C04;color:#fff;border:none;border-radius:980px;padding:12px 28px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;width:100%;">Done</button>
+  </div>
+</div>
+
+<script>
+document.querySelector('a[href="#zelle-modal"]') && document.querySelector('a[href="#zelle-modal"]').addEventListener('click', function(e){
+  e.preventDefault();
+  var m = document.getElementById('zelle-modal');
+  m.style.display='flex';
+});
+</script>
+
+
+<!-- Leaflet for Family Map -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- D3 for Family Tree -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
+<script>
+// ─────────────────────────────────────────────────────────
+// EMAIL DECODE — defeat Cloudflare obfuscation permanently
+// ─────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a.email-link[data-email]').forEach(function(el) {
+    var addr = el.getAttribute('data-email') + '@' + el.getAttribute('data-domain');
+    el.href = 'mailto:' + addr;
+    if (!el.textContent.includes('@')) el.textContent = addr;
+  });
+});
+
+// ─────────────────────────────────────────────────────────
+// STAY IN THE LOOP — Google Apps Script endpoint
+// ─────────────────────────────────────────────────────────
+// SETUP:
+// 1. Go to script.google.com → New project, paste this doPost function:
+//    function doPost(e){
+//      var d=JSON.parse(e.postData.contents);
+//      SpreadsheetApp.openById('YOUR_SHEET_ID').getSheetByName('Mailing List')
+//        .appendRow([d.name,d.email,d.source,new Date().toISOString()]);
+//      return ContentService.createTextOutput('ok');
+//    }
+// 2. Deploy → New deployment → Web app → Anyone can access
+// 3. Replace the URL below with your deployed web app URL
+
+var APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+function submitLoop(e) {
+  e.preventDefault();
+  var name = document.getElementById('loopName').value.trim();
+  var email = document.getElementById('loopEmail').value.trim();
+  var msg = document.getElementById('loopMsg');
+  var btn = document.querySelector('#loopForm .loop-btn');
+  if (!name || !email) return;
+  btn.textContent = 'Submitting…';
+  btn.disabled = true;
+  if (APPS_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+    msg.className = 'loop-msg err';
+    msg.textContent = '⚙️ Setup needed: paste your Google Apps Script URL into APPS_SCRIPT_URL in the script.';
+    btn.textContent = 'Join the List ✉️';
+    btn.disabled = false;
+    return;
+  }
+  fetch(APPS_SCRIPT_URL, {
+    method:'POST', mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({name:name, email:email, source:'website'})
+  }).then(function(){
+    msg.className='loop-msg ok';
+    msg.textContent='✅ You're on the list! Watch your inbox for updates.';
+    document.getElementById('loopForm').reset();
+  }).catch(function(){
+    msg.className='loop-msg err';
+    msg.textContent='❌ Something went wrong. Email Stevenalexanderjr98@gmail.com directly.';
+  }).finally(function(){ btn.textContent='Join the List ✉️'; btn.disabled=false; });
+}
+
+function ebookNotify() {
+  document.getElementById('loop').scrollIntoView({behavior:'smooth'});
+  setTimeout(function(){ document.getElementById('loopName').focus(); }, 600);
+}
+
+// ─────────────────────────────────────────────────────────
+// FAMILY MAP — Leaflet.js
+// Update familyData below with real numbers
+// ─────────────────────────────────────────────────────────
+var familyData = {
+  MD:28, DC:12, VA:18, FL:22, TX:15, GA:19,
+  NY:10, NC:14, SC:8,  CA:11, OH:7,  PA:9,
+  AL:6,  TN:5,  IL:4,  NJ:6
+};
+var stateCoords = {
+  MD:[39.0458,-76.6413], DC:[38.9072,-77.0369], VA:[37.4316,-78.6569],
+  FL:[27.9944,-81.7603], TX:[31.9686,-99.9018], GA:[32.1656,-82.9001],
+  NY:[42.1657,-74.9481], NC:[35.6301,-79.8064], SC:[33.8361,-81.1637],
+  CA:[36.7783,-119.417], OH:[40.4173,-82.9071], PA:[41.2033,-77.1945],
+  AL:[32.3617,-86.2792], TN:[35.7478,-86.6923], IL:[40.3495,-88.9861],
+  NJ:[40.2989,-74.521]
+};
+var stateNames = {
+  MD:'Maryland', DC:'Washington D.C.', VA:'Virginia', FL:'Florida',
+  TX:'Texas', GA:'Georgia', NY:'New York', NC:'North Carolina',
+  SC:'South Carolina', CA:'California', OH:'Ohio', PA:'Pennsylvania',
+  AL:'Alabama', TN:'Tennessee', IL:'Illinois', NJ:'New Jersey'
+};
+function mapColor(n){ return n>20?'#610C04':n>14?'#8B1507':n>9?'#B84020':n>5?'#D4785A':'#EDB89A'; }
+
+document.addEventListener('DOMContentLoaded', function(){
+  var el = document.getElementById('family-map');
+  if (!el || typeof L === 'undefined') return;
+  var map = L.map('family-map',{scrollWheelZoom:false}).setView([37.5,-90],4);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
+    attribution:'© OpenStreetMap © CARTO', subdomains:'abcd', maxZoom:19
+  }).addTo(map);
+  var total = Object.values(familyData).reduce(function(a,b){return a+b;},0);
+  Object.keys(familyData).forEach(function(s){
+    var c = stateCoords[s]; if(!c) return;
+    var n = familyData[s];
+    L.circleMarker(c,{radius:Math.max(16,Math.sqrt(n)*8),fillColor:mapColor(n),color:'#fff',weight:2,fillOpacity:.85})
+     .bindPopup('<strong>'+(stateNames[s]||s)+'</strong><br>'+n+' member'+(n!==1?'s':'')+' ('+Math.round(n/total*100)+'%)')
+     .addTo(map);
+  });
+  var leg = document.getElementById('mapLegend');
+  if(leg){
+    [{l:'20+ members',c:'#610C04'},{l:'15–20',c:'#8B1507'},{l:'10–14',c:'#B84020'},{l:'6–9',c:'#D4785A'},{l:'1–5',c:'#EDB89A'}]
+    .forEach(function(x){
+      var d=document.createElement('div'); d.className='leg-item';
+      d.innerHTML='<div class="leg-dot" style="background:'+x.c+'"></div>'+x.l;
+      leg.appendChild(d);
+    });
+    var t=document.createElement('div'); t.className='leg-item';
+    t.style.cssText='margin-left:auto;font-weight:600;color:var(--text-primary)';
+    t.textContent=total+' members mapped'; leg.appendChild(t);
+  }
+});
+
+// ─────────────────────────────────────────────────────────
+// PHOTO GALLERY — Google Drive API
+// Replace DRIVE_FOLDER_ID and DRIVE_API_KEY below
+// ─────────────────────────────────────────────────────────
+var DRIVE_FOLDER_ID = 'YOUR_FOLDER_ID';
+var DRIVE_API_KEY   = 'YOUR_GOOGLE_API_KEY';
+
+document.addEventListener('DOMContentLoaded', function(){
+  var grid = document.getElementById('photoGrid');
+  var status = document.getElementById('galleryStatus');
+  if (!grid) return;
+  if (DRIVE_FOLDER_ID === 'YOUR_FOLDER_ID') {
+    // Show placeholder cards
+    var labels=['Reunion 2022 🎉','Fish Fry Friday 🐟','The Kids Table 👶','Cookout Memories 🍖','Group Photo 📸','Banquet Night 🎊','Top Golf Fun ⛳','Church Sunday ⛪'];
+    var heights=[200,250,180,240,210,230,195,260];
+    grid.innerHTML = labels.map(function(l,i){
+      return '<div class="masonry-item" onclick="openLightbox(null,''+l+'')">'+
+        '<div class="gallery-ph" style="height:'+heights[i%heights.length]+'px">'+
+        '<div style="font-size:40px;margin-bottom:8px">📷</div><div>'+l+'</div>'+
+        '<div style="margin-top:4px;font-size:11px;opacity:.6">Placeholder — connect your Drive folder</div>'+
+        '</div></div>';
+    }).join('');
+    return;
+  }
+  var url='https://www.googleapis.com/drive/v3/files?q=%22'+DRIVE_FOLDER_ID+'%22+in+parents+and+mimeType+contains+%22image%22&fields=files(id,name)&key='+DRIVE_API_KEY;
+  fetch(url).then(function(r){return r.json();}).then(function(d){
+    if(!d.files||!d.files.length){status.innerHTML='<p style="color:var(--text-secondary)">No photos found. Check your folder ID and make sure the folder is public.</p>';return;}
+    d.files.forEach(function(f){
+      var item=document.createElement('div'); item.className='masonry-item';
+      item.innerHTML='<img src="https://drive.google.com/thumbnail?id='+f.id+'&sz=w400" alt="'+f.name+'" loading="lazy"/>';
+      item.onclick=function(){openLightbox('https://drive.google.com/uc?id='+f.id,f.name);};
+      grid.appendChild(item);
+    });
+  }).catch(function(){
+    status.innerHTML='<p style="color:var(--text-secondary)">Unable to load photos. Verify your Folder ID and API key.</p>';
+  });
+});
+
+function openLightbox(src, cap) {
+  var lb=document.getElementById('lightbox');
+  var img=document.getElementById('lb-img');
+  if(src){img.src=src;img.style.display='block';}else{img.style.display='none';}
+  document.getElementById('lb-cap').textContent=cap||'';
+  lb.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(e, force) {
+  if(!force && e && e.target!==document.getElementById('lightbox') && e.target!==document.getElementById('lb-close')) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox(null,true);});
+
+// ─────────────────────────────────────────────────────────
+// IN MEMORIAM
+// Update ancestorData with real family members
+// ─────────────────────────────────────────────────────────
+var ancestorData = [
+  {name:'Ancestor Name',years:'1920 – 1998',photo:null,note:'Patriarch / Matriarch of the family'},
+  {name:'Ancestor Name',years:'1918 – 2001',photo:null,note:'Beloved grandmother'},
+  {name:'Ancestor Name',years:'1945 – 2015',photo:null,note:'Add a short memory here'},
+  {name:'Ancestor Name',years:'1932 – 2010',photo:null,note:'Forever in our hearts'},
+  {name:'Ancestor Name',years:'1950 – 2019',photo:null,note:'Gone but never forgotten'},
+  {name:'Ancestor Name',years:'1928 – 2005',photo:null,note:'A life well lived'}
+];
+
+document.addEventListener('DOMContentLoaded',function(){
+  var g=document.getElementById('memGrid'); if(!g) return;
+  ancestorData.forEach(function(p){
+    var c=document.createElement('div'); c.className='mem-card';
+    var ph=p.photo?'<div class="mem-photo"><img src="'+p.photo+'" alt="'+p.name+'"/></div>':'<div class="mem-photo"><span style="font-size:26px">🕊</span></div>';
+    c.innerHTML=ph+'<div class="mem-name">'+p.name+'</div><div class="mem-years">'+p.years+'</div>'+(p.note?'<div class="mem-note">"'+p.note+'"</div>':'');
+    g.appendChild(c);
+  });
+});
+
+// ─────────────────────────────────────────────────────────
+// FAMILY TREE — D3.js hierarchical visualization
+// Update familyTree below with real data
+// ─────────────────────────────────────────────────────────
+var familyTree = {
+  name:'Davis Pemberton Family', born:null,
+  children:[
+    {name:'Branch One',born:'1940s',children:[
+      {name:'Child A',born:'1965',children:[{name:'Grandchild A1',born:'1988'},{name:'Grandchild A2',born:'1991'}]},
+      {name:'Child B',born:'1968',children:[{name:'Grandchild B1',born:'1993'}]}
+    ]},
+    {name:'Branch Two',born:'1945',children:[
+      {name:'Child C',born:'1970',children:[{name:'Grandchild C1',born:'1995'},{name:'Grandchild C2',born:'1998'},{name:'Grandchild C3',born:'2001'}]},
+      {name:'Child D',born:'1973'}
+    ]},
+    {name:'Branch Three',born:'1950',children:[
+      {name:'Child E',born:'1975',children:[{name:'Grandchild E1',born:'2000'}]}
+    ]}
+  ]
+};
+
+document.addEventListener('DOMContentLoaded',function(){
+  var container=document.getElementById('tree-container');
+  if(!container||typeof d3==='undefined') return;
+  var nW=150, nH=54, gap=20, levH=90;
+  var root=d3.hierarchy(familyTree);
+  d3.tree().nodeSize([nW+gap,levH])(root);
+  var nodes=root.descendants();
+  var xs=nodes.map(function(d){return d.x;}), ys=nodes.map(function(d){return d.y;});
+  var minX=Math.min.apply(null,xs), maxX=Math.max.apply(null,xs);
+  var maxY=Math.max.apply(null,ys);
+  var w=Math.max(container.clientWidth||800, maxX-minX+nW+60);
+  var h=maxY+nH+60;
+  var ox=-minX+nW/2+30;
+  var svg=d3.select('#tree-container').append('svg')
+    .attr('width','100%').attr('viewBox','0 0 '+w+' '+h)
+    .style('font-family','DM Sans,sans-serif');
+  var g=svg.append('g').attr('transform','translate('+ox+',30)');
+  g.selectAll('.tree-link').data(root.links()).enter().append('path').attr('class','tree-link')
+    .attr('d',function(d){
+      return 'M'+d.source.x+','+(d.source.y+nH)+' C'+d.source.x+','+(d.source.y+nH+levH/2)+' '+d.target.x+','+(d.target.y-levH/2)+' '+d.target.x+','+d.target.y;
+    });
+  var node=g.selectAll('.tree-node').data(nodes).enter().append('g')
+    .attr('transform',function(d){return 'translate('+(d.x-nW/2)+','+d.y+')';});
+  node.append('rect').attr('width',nW).attr('height',nH).attr('rx',8)
+    .attr('fill',function(d){return d.depth===0?'#610C04':d.depth===1?'#8B1507':d.depth===2?'#B84020':'#D4785A';})
+    .attr('stroke','#fff').attr('stroke-width',2);
+  node.append('text').attr('x',nW/2).attr('y',nH/2-6).attr('text-anchor','middle')
+    .attr('dominant-baseline','middle').attr('fill','#fff').attr('font-size','11px').attr('font-weight','500')
+    .text(function(d){return d.data.name.length>18?d.data.name.slice(0,16)+'…':d.data.name;});
+  node.append('text').attr('x',nW/2).attr('y',nH/2+10).attr('text-anchor','middle')
+    .attr('dominant-baseline','middle').attr('fill','rgba(255,255,255,.65)').attr('font-size','10px')
+    .text(function(d){return d.data.born?'b. '+d.data.born:'';});
+});
+</script>
+
+</body>
+</html>
