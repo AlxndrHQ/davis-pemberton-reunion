@@ -1090,12 +1090,37 @@
       </div>
     </a>
   </div>
-  <div class="ebook-card">
-    <div class="ebook-text">
-      <h3>📖 The Davis Pemberton Family E-Book</h3>
-      <p>A digital keepsake celebrating our history, stories, and legacy — coming soon for reunion attendees. Enter your email to be notified the moment it drops.</p>
+  <!-- E-BOOK: Live -->
+  <div style="margin-top:48px;">
+    <div class="section-label" style="margin-bottom:8px;">Now Available</div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📖 The Davis Pemberton Family E-Book</h3>
+    <p style="font-size:15px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">Our official 2026 reunion keepsake — browse it right here or download a copy to keep forever.</p>
+
+    <!-- Embedded PDF viewer -->
+    <div style="border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--surface);">
+      <iframe
+        src="https://drive.google.com/file/d/1Jz1-Sf4Se8WmMLr-VzS67IVhNMyCEIPn/preview"
+        width="100%"
+        height="620"
+        allow="autoplay"
+        style="display:block;border:none;"
+        title="Davis Pemberton Family E-Book">
+      </iframe>
     </div>
-    <button class="ebook-btn" onclick="ebookNotify()">Notify Me 🔔</button>
+
+    <!-- Action buttons -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;align-items:center;">
+      <a href="https://drive.google.com/uc?export=download&id=1Jz1-Sf4Se8WmMLr-VzS67IVhNMyCEIPn"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary">
+        ⬇️ Download E-Book (PDF)
+      </a>
+      <a href="https://drive.google.com/file/d/1Jz1-Sf4Se8WmMLr-VzS67IVhNMyCEIPn/view"
+         target="_blank" rel="noopener noreferrer"
+         class="btn" style="background:var(--surface);color:var(--accent);border:1px solid var(--accent);">
+        🔗 Open in Google Drive
+      </a>
+    </div>
   </div>
 </section>
 
