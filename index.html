@@ -390,6 +390,35 @@
   }
 
 
+
+  /* ── RUN OF SHOW ── */
+  .event-runofshow {
+    margin-top: 12px;
+    border-left: 2px solid var(--border);
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ros-item {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .ros-item--end {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .ros-time {
+    font-weight: 600;
+    color: var(--text-primary);
+    display: inline-block;
+    min-width: 80px;
+  }
+  .ros-item--end .ros-time {
+    color: var(--accent);
+  }
+
   /* ── EMAIL LINKS ── */
   a.email-link { text-decoration:none; }
   a.email-link:hover { text-decoration:underline; }
@@ -642,6 +671,7 @@
   <div class="section-title">Event Schedule</div>
   <p class="section-sub">Four days of connection, celebration, and family tradition across the D.C. metro area.</p>
 
+  <!-- ── THURSDAY ── -->
   <div class="schedule-day">
     <div class="schedule-day-header">
       <span>🐟</span>
@@ -658,6 +688,7 @@
         <div>
           <div class="event-name">Hotel Meet &amp; Greet</div>
           <div class="event-loc">Westin National Harbor · 171 Waterfront St, Oxon Hill, MD</div>
+          <div class="event-dress" style="color:var(--text-secondary);background:var(--surface);">Welcome committee registration — pick up your custom t-shirt, hat, and family booklet.</div>
         </div>
       </div>
       <div class="schedule-event">
@@ -665,11 +696,13 @@
         <div>
           <div class="event-name">Fish Fry</div>
           <div class="event-loc">Uncle Mike's House · 2105 Monticello Ct, Ft. Washington, MD</div>
+          <div class="event-dress" style="color:var(--text-secondary);background:var(--surface);">Family social hour and traditional fish fry dinner.</div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- ── FRIDAY ── -->
   <div class="schedule-day">
     <div class="schedule-day-header">
       <span>🍖</span>
@@ -687,18 +720,28 @@
           <div class="event-name">Family Cookout</div>
           <div class="event-loc">Bolling AFB · 50 Theisen St, Washington, DC 20032</div>
           <div class="event-dress">👕 <strong>Dress Code: Red, White &amp; Denim.</strong> Wear your official reunion tee with your favorite blue jeans or denim bottoms for our family photos!</div>
+          <div class="event-runofshow">
+            <div class="ros-item"><span class="ros-time">3:00 PM</span> Arrival &amp; catering lines open — welcome music playing</div>
+            <div class="ros-item"><span class="ros-time">3:30 PM</span> Yard games kickoff (cornhole, giant Jenga) &amp; Youth Activity Zone opens</div>
+            <div class="ros-item"><span class="ros-time">4:30 PM</span> Legacy group photo &amp; photography contest launch</div>
+            <div class="ros-item"><span class="ros-time">5:00 PM</span> Open socializing &amp; dessert service</div>
+            <div class="ros-item"><span class="ros-time">5:30 PM</span> Cookout wrap-up &amp; final announcements</div>
+            <div class="ros-item"><span class="ros-time">5:30 – 7:30 PM</span> Downtime — freshen up &amp; travel to National Harbor</div>
+          </div>
         </div>
       </div>
       <div class="schedule-event">
-        <div class="event-time">7:00 PM</div>
+        <div class="event-time">7:30 PM</div>
         <div>
-          <div class="event-name">Top Golf</div>
+          <div class="event-name">Top Golf <span style="font-size:12px;font-weight:400;color:var(--text-secondary);">– 9:30 PM</span></div>
           <div class="event-loc">Top Golf National Harbor · 6400 Clipper Way, Oxon Hill, MD 20745</div>
+          <div class="event-dress" style="color:var(--text-secondary);background:var(--surface);">Confirmed bay reservation 7:30 – 9:30 PM. Food, drinks, and golf!</div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- ── SATURDAY ── -->
   <div class="schedule-day">
     <div class="schedule-day-header">
       <span>🎉</span>
@@ -706,30 +749,49 @@
       <div class="schedule-day-date">July 25, 2026</div>
     </div>
     <div class="cal-buttons" style="padding:12px 24px; background:rgba(97,12,4,0.04); border-top:1px solid rgba(255,255,255,0.15);">
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Davis+Pemberton+Reunion+%E2%80%93+Day+3&dates=20260725T090000Z/20260726T000000Z&details=African+American+Museum+%2B+Family+Banquet&location=1400+Constitution+Ave+NW" target="_blank" class="cal-btn gcal">📅 Google Calendar</a>
-      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260725T090000%0ADTEND:20260726T000000%0ASUMMARY:Davis+Pemberton+Reunion+-+Day+3%0ALOCATION:1400+Constitution+Ave+NW%0AEND:VEVENT%0AEND:VCALENDAR" download="reunion-day3.ics" class="cal-btn apple">🍎 Apple Calendar</a>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Davis+Pemberton+Reunion+%E2%80%93+Day+3&dates=20260725T104500Z/20260726T000000Z&details=NMAAHC+Museum+%2B+Family+Banquet+Gala&location=1400+Constitution+Ave+NW" target="_blank" class="cal-btn gcal">📅 Google Calendar</a>
+      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260725T104500%0ADTEND:20260726T000000%0ASUMMARY:Davis+Pemberton+Reunion+-+Day+3%0ALOCATION:1400+Constitution+Ave+NW%0AEND:VEVENT%0AEND:VCALENDAR" download="reunion-day3.ics" class="cal-btn apple">🍎 Apple Calendar</a>
     </div>
     <div class="schedule-events">
       <div class="schedule-event">
-        <div class="event-time">9:00 AM</div>
+        <div class="event-time">10:00 AM</div>
         <div>
-          <div class="event-name">African American Museum
+          <div class="event-name">Bus Loading &amp; Morning Roll Call
             <a href="https://nmaahc.si.edu" target="_blank" style="display:inline-block;margin-left:10px;background:var(--accent);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:980px;text-decoration:none;letter-spacing:0.04em;vertical-align:middle;">🎟 Get Tickets</a>
           </div>
-          <div class="event-loc">1400 Constitution Ave. NW, Washington, DC 20560 · <a href="https://nmaahc.si.edu" target="_blank" style="color:var(--accent);">nmaahc.si.edu</a></div>
+          <div class="event-loc">Westin National Harbor · 171 Waterfront St, Oxon Hill, MD — <strong>Meet at hotel entrance</strong></div>
+          <div class="event-dress" style="color:var(--text-secondary);background:var(--surface);">⚠️ <strong>10:00 AM sharp.</strong> Bus departs promptly to ensure arrival before our 10:45 AM timed museum entry.</div>
+        </div>
+      </div>
+      <div class="schedule-event">
+        <div class="event-time">10:45 AM</div>
+        <div>
+          <div class="event-name">African American Museum Excursion</div>
+          <div class="event-loc">NMAAHC · 1400 Constitution Ave. NW, Washington, DC 20560 · <a href="https://nmaahc.si.edu" target="_blank" style="color:var(--accent);">nmaahc.si.edu</a></div>
+          <div class="event-dress" style="color:var(--text-secondary);background:var(--surface);">Timed entry at 10:45 AM. Self-guided tours — conclude by 1:30 PM.</div>
         </div>
       </div>
       <div class="schedule-event">
         <div class="event-time">5:00 PM</div>
         <div>
-          <div class="event-name">Family Reunion Banquet</div>
+          <div class="event-name">Family Reunion Banquet &amp; Evening Gala <span style="font-size:12px;font-weight:400;color:var(--text-secondary);">– 10:00 PM</span></div>
           <div class="event-loc">Bolling AFB · 50 Theisen St, Washington, DC 20032</div>
           <div class="event-dress">👗 <strong>Dress Code: Semi-Formal.</strong> We're dressing up tonight! Please join us in polos, dress shirts, and slacks or dress pants.</div>
+          <div class="event-runofshow">
+            <div class="ros-item"><span class="ros-time">5:00 PM</span> Arrival, check-in &amp; 360 Photo Booth opens</div>
+            <div class="ros-item"><span class="ros-time">5:30 PM</span> Welcome address, invocation &amp; tribute</div>
+            <div class="ros-item"><span class="ros-time">6:00 PM</span> Dinner service — plated chicken or fish</div>
+            <div class="ros-item"><span class="ros-time">7:00 PM</span> Comedy intermission &amp; entertainment</div>
+            <div class="ros-item"><span class="ros-time">7:30 PM</span> Legacy program, family history &amp; Scholarship Fund ceremony</div>
+            <div class="ros-item"><span class="ros-time">8:30 PM</span> Dance floor celebration &amp; socializing</div>
+            <div class="ros-item ros-item--end"><span class="ros-time">10:00 PM</span> Hard stop — venue closes</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- ── SUNDAY ── -->
   <div class="schedule-day">
     <div class="schedule-day-header">
       <span>⛪</span>
@@ -746,6 +808,7 @@
         <div>
           <div class="event-name">Sunday Service</div>
           <div class="event-loc">St. Mark's Church · 5427 Indian Head Hwy, Forest Heights, MD 20745</div>
+          <div class="event-dress" style="color:var(--text-secondary);background:var(--surface);">Closing fellowship, spiritual blessing &amp; final distribution of remaining legacy merchandise.</div>
         </div>
       </div>
     </div>
