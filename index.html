@@ -468,7 +468,7 @@
 <nav>
   <div class="nav-brand">Davis Pemberton Family Reunion</div>
   <div class="nav-links">
-    <a href="#history">History</a><a href="#map">Family Map</a><a href="#scholarship">Scholarship</a><a href="#memoriam">In Memoriam</a><a href="#travel">Explore DC</a><a href="#schedule">Schedule</a>
+    <a href="#history">History</a><!-- <a href="#map">Family Map</a> --><a href="#scholarship">Scholarship</a><a href="#memoriam">In Memoriam</a><a href="#travel">Explore DC</a><a href="#schedule">Schedule</a>
     <a href="#pricing">Pricing</a>
     <a href="#hotel">Hotel</a>
     <a href="#pay">Payment</a>
@@ -758,7 +758,7 @@
 <section id="pricing">
   <div class="section-label">Registration Fees</div>
   <div class="section-title">What's My Price?</div>
-  <p class="section-sub">Simple, transparent pricing for every family member. <strong>Deadline: May 29, 2026.</strong></p>
+  <p class="section-sub">Simple, transparent pricing for every family member. <strong>Deadline: July 16, 2026.</strong></p>
 
   <div class="pricing-card"><div><div class="pricing-label">Adults</div></div><div class="pricing-right"><div class="pricing-amount">$200</div><a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:13px; white-space:nowrap;">Register →</a></div></div>
   <div class="pricing-card"><div><div class="pricing-label">Seniors</div><div class="pricing-sub">Age 80 and over</div></div><div class="pricing-right"><div class="pricing-amount">$125</div><a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:13px; white-space:nowrap;">Register →</a></div></div>
@@ -928,7 +928,7 @@
   </div>
 
   <div style="margin-top: 20px; background: var(--gold-light); border: 1px solid #e8d5a0; border-radius: var(--radius); padding: 20px 24px; font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-    ⚠️ <strong>No personal checks accepted.</strong> Accepted forms: Eventbrite, Zelle, Money Order, or Cashier's Check. For questions, email <a href="#" data-email="Stevenalexanderjr98" data-domain="gmail.com" style="color: var(--accent);" class="email-link">Stevenalexanderjr98@gmail.com</a> or call (301) 325-0736.
+    ⚠️ <strong>No personal checks accepted.</strong> Accepted forms: Eventbrite, Zelle, Money Order, or Cashier's Check. For questions, email <a href="mailto:Stevenalexanderjr98@gmail.com" style="color: var(--accent);">Stevenalexanderjr98@gmail.com</a> or call (301) 325-0736.
   </div>
 </section>
 
@@ -951,6 +951,7 @@
 </section>
 
 
+<!-- MAP SECTION — hidden until family data is ready
 <hr class="divider" />
 <section id="map">
   <div class="section-label">Where We Are</div>
@@ -958,8 +959,9 @@
   <p class="section-sub">The Davis Pemberton family stretches coast to coast. Here's where everyone is gathering from for the reunion.</p>
   <div id="family-map"></div>
   <div class="map-legend" id="mapLegend"></div>
-  <p style="font-size:12px;color:var(--text-tertiary);margin-top:12px;">📍 Update the <code>familyData</code> object in the page script to reflect your actual family distribution.</p>
+  <p style="font-size:12px;color:var(--text-tertiary);margin-top:12px;">📍 Update the familyData object in the page script to reflect your actual family distribution.</p>
 </section>
+-->
 
 
 <hr class="divider" />
@@ -967,8 +969,8 @@
   <div class="section-label">Family Memories</div>
   <div class="section-title">Photo Gallery</div>
   <p class="section-sub">Moments from reunions past. Connect your Google Drive folder to stream photos automatically.</p>
-  <div class="gallery-note">
-    📁 <strong>To connect your photos:</strong> Replace <code>DRIVE_FOLDER_ID</code> and <code>DRIVE_API_KEY</code> in the script below with your public Google Drive folder ID and API key from <a href="https://console.cloud.google.com" target="_blank" style="color:var(--accent)">console.cloud.google.com</a>.
+  <div class="gallery-note" style="background:var(--surface);border-color:var(--border);">
+    📸 Family photos will appear here. Tap any photo to view full size.
   </div>
   <div class="masonry" id="photoGrid"></div>
   <div id="galleryStatus"></div>
@@ -1098,7 +1100,7 @@ QUICK DEPLOY SCRIPT — save as deploy.sh:
     <div class="section-label" style="margin-bottom: 10px;">You're Invited</div>
     <h2>Ready to Attend?</h2>
     <p>Secure your spot before the registration deadline.</p>
-    <div class="deadline-badge">⏰ Registration closes May 29, 2026</div>
+    <div class="deadline-badge">⏰ Registration closes July 16, 2026</div>
     <div class="register-actions">
       <a href="https://www.eventbrite.com/e/davis-pemberton-family-reunion-tickets-1983203518109?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary">🎟 Register on Eventbrite</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSe04Xrnwhd4f-6Ny9pyY7koNlHjNQwy3z6EaFjIBsswWwjniA/viewform" target="_blank" class="btn btn-secondary">📋 Offline Registration Form</a>
@@ -1114,7 +1116,7 @@ QUICK DEPLOY SCRIPT — save as deploy.sh:
   <p>Washington, D.C. · July 23–26, 2026</p>
   <div class="footer-sep"></div>
   <p>Questions? Contact <strong>Steven Williams Jr</strong></p>
-  <p><a href="tel:3013250736">(301) 325-0736</a> · <a href="#" data-email="Stevenalexanderjr98" data-domain="gmail.com" style="color:rgba(255,255,255,0.6);" class="email-link">Stevenalexanderjr98@gmail.com</a></p>
+  <p><a href="tel:3013250736">(301) 325-0736</a> · <a href="mailto:Stevenalexanderjr98@gmail.com" style="color:rgba(255,255,255,0.6);">Stevenalexanderjr98@gmail.com</a></p>
   <div style="margin-top: 24px; font-size: 12px; opacity: 0.4;">Made with love for the family ♥</div>
 </footer>
 
@@ -1240,59 +1242,18 @@ function ebookNotify() {
   setTimeout(function(){ document.getElementById('loopName').focus(); }, 600);
 }
 
+/* MAP JS — hidden until family data is ready
 // ─────────────────────────────────────────────────────────
 // FAMILY MAP — Leaflet.js
-// Update familyData below with real numbers
+// Update familyData below with real numbers, then uncomment
 // ─────────────────────────────────────────────────────────
 var familyData = {
   MD:28, DC:12, VA:18, FL:22, TX:15, GA:19,
   NY:10, NC:14, SC:8,  CA:11, OH:7,  PA:9,
   AL:6,  TN:5,  IL:4,  NJ:6
 };
-var stateCoords = {
-  MD:[39.0458,-76.6413], DC:[38.9072,-77.0369], VA:[37.4316,-78.6569],
-  FL:[27.9944,-81.7603], TX:[31.9686,-99.9018], GA:[32.1656,-82.9001],
-  NY:[42.1657,-74.9481], NC:[35.6301,-79.8064], SC:[33.8361,-81.1637],
-  CA:[36.7783,-119.417], OH:[40.4173,-82.9071], PA:[41.2033,-77.1945],
-  AL:[32.3617,-86.2792], TN:[35.7478,-86.6923], IL:[40.3495,-88.9861],
-  NJ:[40.2989,-74.521]
-};
-var stateNames = {
-  MD:'Maryland', DC:'Washington D.C.', VA:'Virginia', FL:'Florida',
-  TX:'Texas', GA:'Georgia', NY:'New York', NC:'North Carolina',
-  SC:'South Carolina', CA:'California', OH:'Ohio', PA:'Pennsylvania',
-  AL:'Alabama', TN:'Tennessee', IL:'Illinois', NJ:'New Jersey'
-};
-function mapColor(n){ return n>20?'#610C04':n>14?'#8B1507':n>9?'#B84020':n>5?'#D4785A':'#EDB89A'; }
-
-document.addEventListener('DOMContentLoaded', function(){
-  var el = document.getElementById('family-map');
-  if (!el || typeof L === 'undefined') return;
-  var map = L.map('family-map',{scrollWheelZoom:false}).setView([37.5,-90],4);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
-    attribution:'© OpenStreetMap © CARTO', subdomains:'abcd', maxZoom:19
-  }).addTo(map);
-  var total = Object.values(familyData).reduce(function(a,b){return a+b;},0);
-  Object.keys(familyData).forEach(function(s){
-    var c = stateCoords[s]; if(!c) return;
-    var n = familyData[s];
-    L.circleMarker(c,{radius:Math.max(16,Math.sqrt(n)*8),fillColor:mapColor(n),color:'#fff',weight:2,fillOpacity:.85})
-     .bindPopup('<strong>'+(stateNames[s]||s)+'</strong><br>'+n+' member'+(n!==1?'s':'')+' ('+Math.round(n/total*100)+'%)')
-     .addTo(map);
-  });
-  var leg = document.getElementById('mapLegend');
-  if(leg){
-    [{l:'20+ members',c:'#610C04'},{l:'15–20',c:'#8B1507'},{l:'10–14',c:'#B84020'},{l:'6–9',c:'#D4785A'},{l:'1–5',c:'#EDB89A'}]
-    .forEach(function(x){
-      var d=document.createElement('div'); d.className='leg-item';
-      d.innerHTML='<div class="leg-dot" style="background:'+x.c+'"></div>'+x.l;
-      leg.appendChild(d);
-    });
-    var t=document.createElement('div'); t.className='leg-item';
-    t.style.cssText='margin-left:auto;font-weight:600;color:var(--text-primary)';
-    t.textContent=total+' members mapped'; leg.appendChild(t);
-  }
-});
+... (full block preserved — uncomment when ready)
+*/
 
 // ─────────────────────────────────────────────────────────
 // PHOTO GALLERY — Google Drive API
@@ -1313,7 +1274,7 @@ document.addEventListener('DOMContentLoaded', function(){
       return '<div class="masonry-item" onclick="openLightbox(null,this.dataset.label)" data-label="'+l+'">'+
         '<div class="gallery-ph" style="height:'+heights[i%heights.length]+'px">'+
         '<div style="font-size:40px;margin-bottom:8px">📷</div><div>'+l+'</div>'+
-        '<div style="margin-top:4px;font-size:11px;opacity:.6">Placeholder — connect your Drive folder</div>'+
+        '<div style="margin-top:4px;font-size:11px;opacity:.6">Tap to view full size</div>'+
         '</div></div>';
     }).join('');
     return;
