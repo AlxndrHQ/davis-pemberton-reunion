@@ -1106,7 +1106,7 @@
 <section id="gallery">
   <div class="section-label">Family Memories</div>
   <div class="section-title">Photo Gallery</div>
-  <p class="section-sub">Moments from reunions past. Connect your Google Drive folder to stream photos automatically.</p>
+  <p class="section-sub">Moments from reunions past. Photos from our 2026 reunion weekend — tap any image to view full size.</p>
   <div class="gallery-note" style="background:var(--surface);border-color:var(--border);">
     📸 Family photos will appear here. Tap any photo to view full size.
   </div>
@@ -1564,39 +1564,58 @@ var familyData = {
 // PHOTO GALLERY — Google Drive API
 // Replace DRIVE_FOLDER_ID and DRIVE_API_KEY below
 // ─────────────────────────────────────────────────────────
-var DRIVE_FOLDER_ID = 'YOUR_FOLDER_ID';
+var DRIVE_FOLDER_ID = '1_vXaY0Dtups4wZb3CmZZr9nOJlQ2zB5Q';
 var DRIVE_API_KEY   = 'YOUR_GOOGLE_API_KEY';
 
 document.addEventListener('DOMContentLoaded', function(){
   var grid = document.getElementById('photoGrid');
   var status = document.getElementById('galleryStatus');
   if (!grid) return;
-  if (DRIVE_FOLDER_ID === 'YOUR_FOLDER_ID') {
-    // Show placeholder cards
-    var labels=['Reunion 2022 🎉','Fish Fry Friday 🐟','The Kids Table 👶','Cookout Memories 🍖','Group Photo 📸','Banquet Night 🎊','Top Golf Fun ⛳','Church Sunday ⛪'];
-    var heights=[200,250,180,240,210,230,195,260];
-    grid.innerHTML = labels.map(function(l,i){
-      return '<div class="masonry-item" onclick="openLightbox(null,this.dataset.label)" data-label="'+l+'">'+
-        '<div class="gallery-ph" style="height:'+heights[i%heights.length]+'px">'+
-        '<div style="font-size:40px;margin-bottom:8px">📷</div><div>'+l+'</div>'+
-        '<div style="margin-top:4px;font-size:11px;opacity:.6">Tap to view full size</div>'+
-        '</div></div>';
-    }).join('');
-    return;
-  }
-  var url='https://www.googleapis.com/drive/v3/files?q=%22'+DRIVE_FOLDER_ID+'%22+in+parents+and+mimeType+contains+%22image%22&fields=files(id,name)&key='+DRIVE_API_KEY;
-  fetch(url).then(function(r){return r.json();}).then(function(d){
-    if(!d.files||!d.files.length){status.innerHTML='<p style="color:var(--text-secondary)">No photos found. Check your folder ID and make sure the folder is public.</p>';return;}
-    d.files.forEach(function(f){
-      var item=document.createElement('div'); item.className='masonry-item';
-      item.innerHTML='<img src="https://drive.google.com/thumbnail?id='+f.id+'&sz=w400" alt="'+f.name+'" loading="lazy"/>';
-      item.onclick=function(){openLightbox('https://drive.google.com/uc?id='+f.id,f.name);};
-      grid.appendChild(item);
+
+  // Load photos from public Google Drive folder via API
+  var url = 'https://www.googleapis.com/drive/v3/files'
+    + '?q=%22' + DRIVE_FOLDER_ID + '%22+in+parents'
+    + '+and+mimeType+contains+%22image%22'
+    + '+and+trashed%3Dfalse'
+    + '&fields=files(id,name)'
+    + '&pageSize=50'
+    + '&key=' + DRIVE_API_KEY;
+
+  fetch(url)
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      if (!d.files || !d.files.length) {
+        // Fallback: embed the folder directly as an iframe
+        showFolderEmbed(status);
+        return;
+      }
+      d.files.forEach(function(f) {
+        var item = document.createElement('div');
+        item.className = 'masonry-item';
+        item.innerHTML = '<img src="https://drive.google.com/thumbnail?id=' + f.id + '&sz=w600" alt="' + f.name + '" loading="lazy"/>';
+        item.onclick = function() { openLightbox('https://lh3.googleusercontent.com/d/' + f.id, f.name); };
+        grid.appendChild(item);
+      });
+    })
+    .catch(function() {
+      // API key not set or quota — fall back to folder embed
+      showFolderEmbed(status);
     });
-  }).catch(function(){
-    status.innerHTML='<p style="color:var(--text-secondary)">Unable to load photos. Verify your Folder ID and API key.</p>';
-  });
 });
+
+function showFolderEmbed(container) {
+  // Fallback: embed the Drive folder directly — works with no API key
+  var el = container || document.getElementById('galleryStatus');
+  if (!el) return;
+  el.innerHTML =
+    '<div style="border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">'
+    + '<iframe src="https://drive.google.com/embeddedfolderview?id=1_vXaY0Dtups4wZb3CmZZr9nOJlQ2zB5Q#grid" '
+    + 'style="width:100%;height:580px;border:none;" title="Family Photo Gallery"></iframe>'
+    + '</div>'
+    + '<p style="font-size:12px;color:var(--text-tertiary);margin-top:10px;">📁 '
+    + '<a href="https://drive.google.com/drive/folders/1_vXaY0Dtups4wZb3CmZZr9nOJlQ2zB5Q" target="_blank" style="color:var(--accent);">Open full gallery in Google Drive</a>'
+    + '</p>';
+}
 
 function openLightbox(src, cap) {
   var lb=document.getElementById('lightbox');
