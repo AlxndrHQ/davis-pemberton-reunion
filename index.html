@@ -492,12 +492,6 @@
 </style>
 </head>
 <body>
-<!-- URGENT MUSEUM BANNER -->
-<div id="museum-banner" style="background:#B41412;color:#fff;text-align:center;padding:14px 20px;font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.5;position:relative;z-index:999;">
-  🎟 <strong>Museum Tomorrow — Don't Miss Out!</strong> &nbsp;Meet <strong>outside the African American Museum</strong> at <strong>9:45 AM</strong> or <strong>10:15 AM</strong> for your entry session. Contact Steven at <a href="tel:3013250736" style="color:#fff;font-weight:700;">(301) 325-0736</a> to grab your ticket.
-  <button onclick="document.getElementById('museum-banner').style.display='none'" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,0.8);font-size:22px;cursor:pointer;line-height:1;" aria-label="Dismiss">×</button>
-</div>
-
 
 
 <!-- NAV -->
@@ -738,7 +732,7 @@
         <div class="event-time">6:00 PM</div>
         <div>
           <div class="event-name">Fish Fry</div>
-          <div class="event-loc">Uncle Mike's House · 2105 Monticello Ct, Ft. Washington, MD</div>
+          <div class="event-loc">Uncle Mike's House</div>
           <div class="event-dress" style="color:var(--text-secondary);background:var(--surface);">Family social hour and traditional fish fry dinner.</div>
         </div>
       </div>
@@ -1106,12 +1100,49 @@
 <section id="gallery">
   <div class="section-label">Family Memories</div>
   <div class="section-title">Photo Gallery</div>
-  <p class="section-sub">Moments from reunions past. Photos from our 2026 reunion weekend — tap any image to view full size.</p>
-  <div class="gallery-note" style="background:var(--surface);border-color:var(--border);">
-    📸 Family photos will appear here. Tap any photo to view full size.
+  <p class="section-sub">Photos from our 2026 reunion weekend — browse the family gallery or check out the photo booth shots!</p>
+
+  <!-- Gallery tabs -->
+  <div style="display:flex;gap:8px;margin-bottom:20px;border-bottom:2px solid var(--border);padding-bottom:0;">
+    <button id="tab-drive" onclick="switchGalleryTab('drive')"
+      style="padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;border:none;border-bottom:3px solid var(--accent);background:none;color:var(--accent);cursor:pointer;margin-bottom:-2px;">
+      📸 Family Photos
+    </button>
+    <button id="tab-smugmug" onclick="switchGalleryTab('smugmug')"
+      style="padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;border:none;border-bottom:3px solid transparent;background:none;color:var(--text-secondary);cursor:pointer;margin-bottom:-2px;">
+      🎉 Photo Booth
+    </button>
   </div>
-  <div class="masonry" id="photoGrid"></div>
-  <div id="galleryStatus"></div>
+
+  <!-- Drive gallery tab -->
+  <div id="gallery-drive">
+    <div class="gallery-note" style="background:var(--surface);border-color:var(--border);">
+      📸 Family photos will appear here. Tap any photo to view full size.
+    </div>
+    <div class="masonry" id="photoGrid"></div>
+    <div id="galleryStatus"></div>
+  </div>
+
+  <!-- SmugMug photo booth tab -->
+  <div id="gallery-smugmug" style="display:none;">
+    <div style="border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+      <iframe
+        src="https://mrshuttersworth.smugmug.com/Davis-Pemberton-Family-Reunion-2026-Photo-Booth/n-9HzQcJ/i-embed"
+        width="100%"
+        height="620"
+        style="display:block;border:none;"
+        title="Davis Pemberton Family Reunion 2026 Photo Booth">
+      </iframe>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;align-items:center;">
+      <a href="https://mrshuttersworth.smugmug.com/Davis-Pemberton-Family-Reunion-2026-Photo-Booth"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary">
+        🖼 View Full Photo Booth Gallery
+      </a>
+    </div>
+    <p style="font-size:12px;color:var(--text-tertiary);margin-top:10px;">Photos by MrShuttersworth · Tap "View Full Gallery" to browse, download, and share your favorites.</p>
+  </div>
 </section>
 <div id="lightbox" onclick="closeLightbox(event)">
   <span id="lb-close" onclick="closeLightbox(null,true)">×</span>
@@ -1711,5 +1742,29 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 
+
+<script>
+function switchGalleryTab(tab) {
+  var driveEl   = document.getElementById('gallery-drive');
+  var smugEl    = document.getElementById('gallery-smugmug');
+  var tabDrive  = document.getElementById('tab-drive');
+  var tabSmug   = document.getElementById('tab-smugmug');
+  if (tab === 'drive') {
+    driveEl.style.display  = 'block';
+    smugEl.style.display   = 'none';
+    tabDrive.style.color   = 'var(--accent)';
+    tabDrive.style.borderBottom = '3px solid var(--accent)';
+    tabSmug.style.color    = 'var(--text-secondary)';
+    tabSmug.style.borderBottom  = '3px solid transparent';
+  } else {
+    driveEl.style.display  = 'none';
+    smugEl.style.display   = 'block';
+    tabSmug.style.color    = 'var(--accent)';
+    tabSmug.style.borderBottom  = '3px solid var(--accent)';
+    tabDrive.style.color   = 'var(--text-secondary)';
+    tabDrive.style.borderBottom = '3px solid transparent';
+  }
+}
+</script>
 </body>
 </html>
