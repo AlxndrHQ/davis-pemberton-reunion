@@ -1112,6 +1112,10 @@
       style="padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;border:none;border-bottom:3px solid transparent;background:none;color:var(--text-secondary);cursor:pointer;margin-bottom:-2px;">
       🎉 Photo Booth
     </button>
+    <button id="tab-360" onclick="switchGalleryTab('360')"
+      style="padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;border:none;border-bottom:3px solid transparent;background:none;color:var(--text-secondary);cursor:pointer;margin-bottom:-2px;">
+      🔄 360 Cam
+    </button>
   </div>
 
   <!-- Drive gallery tab -->
@@ -1142,6 +1146,27 @@
       </a>
     </div>
     <p style="font-size:12px;color:var(--text-tertiary);margin-top:10px;">Photos by MrShuttersworth · Tap "View Full Gallery" to browse, download, and share your favorites.</p>
+  </div>
+
+  <!-- 360 Cam tab -->
+  <div id="gallery-360" style="display:none;">
+    <div style="border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+      <iframe
+        src="https://mrshuttersworth.smugmug.com/Davis-Pemberton-Family-Reunion-360/n-embed"
+        width="100%"
+        height="620"
+        style="display:block;border:none;"
+        title="Davis Pemberton Family Reunion 2026 360 Cam">
+      </iframe>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;align-items:center;">
+      <a href="https://mrshuttersworth.smugmug.com/Davis-Pemberton-Family-Reunion-360"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary">
+        🔄 View Full 360 Gallery
+      </a>
+    </div>
+    <p style="font-size:12px;color:var(--text-tertiary);margin-top:10px;">360° photos by MrShuttersworth · Tap "View Full Gallery" to browse and download.</p>
   </div>
 </section>
 <div id="lightbox" onclick="closeLightbox(event)">
@@ -1745,25 +1770,17 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <script>
 function switchGalleryTab(tab) {
-  var driveEl   = document.getElementById('gallery-drive');
-  var smugEl    = document.getElementById('gallery-smugmug');
-  var tabDrive  = document.getElementById('tab-drive');
-  var tabSmug   = document.getElementById('tab-smugmug');
-  if (tab === 'drive') {
-    driveEl.style.display  = 'block';
-    smugEl.style.display   = 'none';
-    tabDrive.style.color   = 'var(--accent)';
-    tabDrive.style.borderBottom = '3px solid var(--accent)';
-    tabSmug.style.color    = 'var(--text-secondary)';
-    tabSmug.style.borderBottom  = '3px solid transparent';
-  } else {
-    driveEl.style.display  = 'none';
-    smugEl.style.display   = 'block';
-    tabSmug.style.color    = 'var(--accent)';
-    tabSmug.style.borderBottom  = '3px solid var(--accent)';
-    tabDrive.style.color   = 'var(--text-secondary)';
-    tabDrive.style.borderBottom = '3px solid transparent';
-  }
+  var tabs    = ['drive', 'smugmug', '360'];
+  var active  = document.getElementById('tab-' + tab);
+  tabs.forEach(function(t) {
+    var el  = document.getElementById('gallery-' + t);
+    var btn = document.getElementById('tab-' + t);
+    if (!el || !btn) return;
+    var isActive = (t === tab);
+    el.style.display        = isActive ? 'block' : 'none';
+    btn.style.color         = isActive ? 'var(--accent)' : 'var(--text-secondary)';
+    btn.style.borderBottom  = isActive ? '3px solid var(--accent)' : '3px solid transparent';
+  });
 }
 </script>
 </body>
