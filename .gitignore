@@ -1,0 +1,4 @@
+.DS_Store
+# old page copies and payment QR contain personal contact details: kept locally, never published
+Archive/*.html
+Archive/IMG_3790.PNG
